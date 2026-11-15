@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>गुरुकुल शिक्षा केंद्र, हवेलीपुर | Competitive Exam Coaching</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Header / Navbar */
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+      color: #ffffff;
+      padding: 12px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* ऊपर बाईं तरफ वाला लोगो - अब बिना किसी कटिंग के साफ दिखेगा */
+    .nav-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      background-color: transparent;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .nav-btn {
+      background-color: #facc15;
+      color: #1e3a8a;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 50px 6% 65px;
+    }
+
+    /* बीच वाला बड़ा लोगो - अब बिना किसी एक्स्ट्रा बॉर्डर के बिल्कुल फिट दिखेगा */
+    .hero-logo {
+      width: 145px;
+      height: 145px;
+      object-fit: contain;
+      background-color: transparent;
+      margin: 0 auto 20px;
+      display: block;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
+    }
+
+    .badge-dir {
+      display: inline-block;
+      background-color: rgba(250, 204, 21, 0.18);
+      color: #fde047;
+      border: 1px solid #facc15;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto 28px;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .btn-wa {
+      background-color: #22c55e;
+      color: #ffffff;
+      padding: 13px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .btn-call {
+      background-color: #ffffff;
+      color: #1e3a8a;
+      padding: 13px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 45px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #64748b;
+      margin-bottom: 30px;
+    }
+
+    /* Exams Grid */
+    .exams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    .exam-card {
+      background: #ffffff;
+      border-left: 5px solid #1d4ed8;
+      padding: 18px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      font-weight: bold;
+      color: #0f172a;
+      font-size: 1.05rem;
+    }
+
+    .exam-card.highlight {
+      border-left-color: #eab308;
+      background-color: #fefce8;
+    }
+
+    /* Routine / Time Table */
+    .routine-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+      overflow-x: auto;
+    }
+
+    .batch-time {
+      text-align: center;
+      background-color: #eff6ff;
+      color: #1d4ed8;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      border: 1px dashed #3b82f6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    th {
+      background-color: #1e3a8a;
+      color: #ffffff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .holiday {
+      color: #dc2626;
+      font-weight: bold;
+    }
+
+    /* Social & Channels */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .social-card {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .social-card h3 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .social-card p {
+      font-size: 0.92rem;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+
+    .btn-yt {
+      display: inline-block;
+      background-color: #dc2626;
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-tg {
+      display: inline-block;
+      background-color: #0284c7;
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 4px;
+    }
+
+    /* Contact Section */
+    .contact-box {
+      background: #1e3a8a;
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 40px 25px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 12px;
+      font-size: 1.8rem;
+    }
+
+    .phone-list {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 18px 0;
+      color: #fde047;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      background-color: #0f172a;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand-box">
+      <img src="logo.png" alt="गुरुकुल शिक्षा केंद्र लोगो" class="nav-logo">
+      <div class="brand">गुरुकुल शिक्षा केंद्र</div>
+    </div>
+    <a href="#contact" class="nav-btn">एडमिशन / संपर्क</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="logo.png" alt="गुरुकुल शिक्षा केंद्र लोगो" class="hero-logo">
+    <div class="badge-dir">Dir. Iqbal Sir & Sandeep Sir</div>
+    <h1>गुरुकुल शिक्षा केंद्र, हवेलीपुर</h1>
+    <p>सरकारी नौकरी की संपूर्ण एवं सटीक तैयारी के लिए विश्वसनीय संस्थान। अनुभवी शिक्षकों के मार्गदर्शन में आज ही अपना भविष्य सुरक्षित करें।</p>
+    <div class="cta-group">
+      <a href="https://wa.me/917371031127?text=नमस्ते%20सर,%20मुझे%20गुरुकुल%20शिक्षा%20केंद्र,%20हवेलीपुर%20में%20क्लास%20जॉइन%20करने%20की%20जानकारी%20चाहिए।" class="btn-wa" target="_blank">
+        WhatsApp पर जुड़ें
+      </a>
+      <a href="tel:+917371031127" class="btn-call">
+        📞 अभी कॉल करें
+      </a>
+    </div>
+  </section>
+
+  <!-- Target Exams Section -->
+  <section class="container">
+    <h2 class="section-title">तैयारी कराए जाने वाले प्रमुख एग्जाम</h2>
+    <p class="section-sub">सभी प्रतियोगी परीक्षाओं के लिए विशेष बैच उपलब्ध हैं</p>
+    <div class="exams-grid">
+      <div class="exam-card highlight">⭐ BIHAR POLICE</div>
+      <div class="exam-card highlight">🔴 BIHAR SSC</div>
+      <div class="exam-card highlight">➡️ BPSC TEACHER</div>
+      <div class="exam-card">🚓 BIHAR DRIVER</div>
+      <div class="exam-card">🎓 BIHAR D.El.Ed</div>
+      <div class="exam-card">🪖 SSC GD & ARMY / GD</div>
+      <div class="exam-card">🚆 RAILWAY (NTPC & GROUP D)</div>
+      <div class="exam-card">📚 अन्य सभी प्रतियोगी परीक्षाएं</div>
+    </div>
+  </section>
+
+  <!-- Daily Routine Section -->
+  <section class="container" style="padding-top: 10px;">
+    <h2 class="section-title">साप्ताहिक क्लास रूटीन (Time-Table)</h2>
+    <p class="section-sub">नियमित क्लास और साप्ताहिक रिवीजन की पूरी व्यवस्था</p>
+    <div class="routine-box">
+      <div class="batch-time">⏰ Batch Timing: शाम 4:00 PM से 6:00 PM तक</div>
+      <table>
+        <thead>
+          <tr>
+            <th>दिन (Day)</th>
+            <th>विषय (Subjects)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>सोमवार (Monday)</strong></td>
+            <td>मैथ (Math) + रीजनिंग (Reasoning)</td>
+          </tr>
+          <tr>
+            <td><strong>मंगलवार (Tuesday)</strong></td>
+            <td>मैथ (Math) + रीजनिंग (Reasoning)</td>
+          </tr>
+          <tr>
+            <td><strong>बुधवार (Wednesday)</strong></td>
+            <td>मैथ (Math) + World Map</td>
+          </tr>
+          <tr>
+            <td><strong>गुरुवार (Thursday)</strong></td>
+            <td>भौतिकी विज्ञान (Physics) + World Map</td>
+          </tr>
+          <tr>
+            <td><strong>शुक्रवार (Friday)</strong></td>
+            <td>भौतिकी विज्ञान (Physics) + World Geography</td>
+          </tr>
+          <tr>
+            <td><strong>शनिवार (Saturday)</strong></td>
+            <td>भौतिकी विज्ञान (Physics) + World Geography + Revision</td>
+          </tr>
+          <tr>
+            <td><strong>रविवार (Sunday)</strong></td>
+            <td class="holiday">HOLIDAY (साप्ताहिक अवकाश)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- YouTube & Telegram Channels -->
+  <section class="container" style="padding-top: 10px;">
+    <h2 class="section-title">ऑनलाइन क्लास और नोट्स के लिए जुड़ें</h2>
+    <p class="section-sub">फ्री वीडियो लेक्चर और PDF नोट्स पाने के लिए हमारे चैनल जॉइन करें</p>
+    <div class="social-grid">
+      <div class="social-card">
+        <h3>▶️ हमारा YouTube चैनल</h3>
+        <p>ऑनलाइन क्लास, प्रैक्टिस सेट और महत्वपूर्ण अपडेट्स देखने के लिए सब्सक्राइब करें।</p>
+        <a href="https://youtube.com/@g.s.k.havelipur?si=AW_ZJ8xqDkRRm67m" class="btn-yt" target="_blank">YouTube चैनल खोलें</a>
+      </div>
+      <div class="social-card">
+        <h3>✈️ हमारे Telegram चैनल</h3>
+        <p>रोज़ाना के क्लास नोट्स, क्विज़ और परीक्षा सूचना पाने के लिए Telegram से जुड़ें।</p>
+        <a href="https://t.me/+RBuDihCXrEI5MzRl" class="btn-tg" target="_blank">Telegram ग्रुप 1</a>
+        <a href="https://t.me/+oOSCN90aQjJhMzQ1" class="btn-tg" target="_blank">Telegram ग्रुप 2</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container" id="contact">
+    <div class="contact-box">
+      <h2>आज ही नया बैच जॉइन करें!</h2>
+      <p>पता: गुरुकुल शिक्षा केंद्र, हवेलीपुर | संचालक: Iqbal Sir & Sandeep Sir</p>
+      <div class="phone-list">
+        📞 7371031127 &nbsp;|&nbsp; 📞 8581026632
+      </div>
+      <div class="cta-group">
+        <a href="https://wa.me/917371031127?text=नमस्ते%20सर,%20मुझे%20कोचिंग%20जॉइन%20करनी%20है।" class="btn-wa" target="_blank">
+          WhatsApp (7371031127)
+        </a>
+        <a href="https://wa.me/918581026632?text=नमस्ते%20सर,%20मुझे%20कोचिंग%20जॉइन%20करनी%20है।" class="btn-call" target="_blank">
+          WhatsApp (8581026632)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 गुरुकुल शिक्षा केंद्र, हवेलीपुर (Dir. Iqbal Sir & Sandeep Sir). सभी अधिकार सुरक्षित।
+  </footer>
+
+</body>
+</html>
